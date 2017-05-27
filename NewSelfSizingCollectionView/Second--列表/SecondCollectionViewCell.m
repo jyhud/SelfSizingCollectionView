@@ -82,5 +82,41 @@
     
     
 }
+/*
+ 
+    size 
+ */
+
+#pragma - mark These methods are here just to place breakpoints
+
+// method called when using auto sizing cells
+- (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
+    
+    
+    NSLog(@"__%s__",__FUNCTION__);
+//    self.textLabel.preferredMaxLayoutWidth = layoutAttributes.size.width;
+    UICollectionViewLayoutAttributes *size = [super preferredLayoutAttributesFittingAttributes:layoutAttributes];
+    
+    // computed size can be changed here, but should not be necessary
+    
+    return size;
+}
+
+// called for cells with autolayout
+- (CGSize)systemLayoutSizeFittingSize:(CGSize)targetSize {
+    CGSize size = [super systemLayoutSizeFittingSize:targetSize];
+    
+    NSLog(@"__%s__",__FUNCTION__);
+    
+    return size;
+}
+
+// called if no autolayout is used
+- (CGSize)sizeThatFits:(CGSize)targetSize {
+    CGSize size = [super sizeThatFits:targetSize];
+    
+    return size;
+}
+
 
 @end
