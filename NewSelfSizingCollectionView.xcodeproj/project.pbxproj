@@ -38,6 +38,12 @@
 		8404C6C41ED983510004DF42 /* 1234.png in Resources */ = {isa = PBXBuildFile; fileRef = 8404C6C31ED983510004DF42 /* 1234.png */; };
 		8404C6C61ED983650004DF42 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8404C6C51ED983650004DF42 /* data.json */; };
 		8404C6C91ED984A70004DF42 /* SecondModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404C6C81ED984A70004DF42 /* SecondModel.m */; };
+		844E8AB81EE143D200C3C3D1 /* UILabel+GQLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8AB71EE143D200C3C3D1 /* UILabel+GQLabel.m */; };
+		844E8ABD1EE148E200C3C3D1 /* ThirdCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8ABB1EE148E200C3C3D1 /* ThirdCollectionViewController.m */; };
+		844E8ABE1EE148E200C3C3D1 /* ThirdCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844E8ABC1EE148E200C3C3D1 /* ThirdCollectionViewController.xib */; };
+		844E8AC21EE1495F00C3C3D1 /* ThirdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8AC01EE1495F00C3C3D1 /* ThirdCollectionViewCell.m */; };
+		844E8AC31EE1495F00C3C3D1 /* ThirdCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844E8AC11EE1495F00C3C3D1 /* ThirdCollectionViewCell.xib */; };
+		844E8AC61EE14A9B00C3C3D1 /* ThirdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8AC51EE14A9B00C3C3D1 /* ThirdModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +123,16 @@
 		8404C6C51ED983650004DF42 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8404C6C71ED984A70004DF42 /* SecondModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondModel.h; sourceTree = "<group>"; };
 		8404C6C81ED984A70004DF42 /* SecondModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondModel.m; sourceTree = "<group>"; };
+		844E8AB61EE143D200C3C3D1 /* UILabel+GQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GQLabel.h"; sourceTree = "<group>"; };
+		844E8AB71EE143D200C3C3D1 /* UILabel+GQLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GQLabel.m"; sourceTree = "<group>"; };
+		844E8ABA1EE148E200C3C3D1 /* ThirdCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionViewController.h; sourceTree = "<group>"; };
+		844E8ABB1EE148E200C3C3D1 /* ThirdCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCollectionViewController.m; sourceTree = "<group>"; };
+		844E8ABC1EE148E200C3C3D1 /* ThirdCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCollectionViewController.xib; sourceTree = "<group>"; };
+		844E8ABF1EE1495F00C3C3D1 /* ThirdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionViewCell.h; sourceTree = "<group>"; };
+		844E8AC01EE1495F00C3C3D1 /* ThirdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdCollectionViewCell.m; sourceTree = "<group>"; };
+		844E8AC11EE1495F00C3C3D1 /* ThirdCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdCollectionViewCell.xib; sourceTree = "<group>"; };
+		844E8AC41EE14A9B00C3C3D1 /* ThirdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdModel.h; sourceTree = "<group>"; };
+		844E8AC51EE14A9B00C3C3D1 /* ThirdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +183,8 @@
 		8404C64B1ED97A640004DF42 /* NewSelfSizingCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				844E8AB61EE143D200C3C3D1 /* UILabel+GQLabel.h */,
+				844E8AB71EE143D200C3C3D1 /* UILabel+GQLabel.m */,
 				8404C6C51ED983650004DF42 /* data.json */,
 				8404C6C31ED983510004DF42 /* 1234.png */,
 				8404C6951ED97DA80004DF42 /* Masonry */,
@@ -177,6 +195,7 @@
 				8404C6831ED97AE90004DF42 /* HomeViewController.xib */,
 				8404C67F1ED97A9A0004DF42 /* First--标签 */,
 				8404C6801ED97A9A0004DF42 /* Second--列表 */,
+				844E8AB91EE148B300C3C3D1 /* Third--更多 */,
 				8404C6581ED97A640004DF42 /* Assets.xcassets */,
 				8404C65A1ED97A640004DF42 /* LaunchScreen.storyboard */,
 				8404C65D1ED97A640004DF42 /* Info.plist */,
@@ -279,6 +298,22 @@
 				8404C6B01ED97DA80004DF42 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		844E8AB91EE148B300C3C3D1 /* Third--更多 */ = {
+			isa = PBXGroup;
+			children = (
+				844E8ABA1EE148E200C3C3D1 /* ThirdCollectionViewController.h */,
+				844E8ABB1EE148E200C3C3D1 /* ThirdCollectionViewController.m */,
+				844E8ABC1EE148E200C3C3D1 /* ThirdCollectionViewController.xib */,
+				844E8ABF1EE1495F00C3C3D1 /* ThirdCollectionViewCell.h */,
+				844E8AC01EE1495F00C3C3D1 /* ThirdCollectionViewCell.m */,
+				844E8AC11EE1495F00C3C3D1 /* ThirdCollectionViewCell.xib */,
+				844E8AC41EE14A9B00C3C3D1 /* ThirdModel.h */,
+				844E8AC51EE14A9B00C3C3D1 /* ThirdModel.m */,
+			);
+			name = "Third--更多";
+			path = "First--标签/third--更多";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,7 +431,9 @@
 				8404C6C61ED983650004DF42 /* data.json in Resources */,
 				8404C6941ED97D630004DF42 /* FirstCollectionViewCell.xib in Resources */,
 				8404C6591ED97A640004DF42 /* Assets.xcassets in Resources */,
+				844E8AC31EE1495F00C3C3D1 /* ThirdCollectionViewCell.xib in Resources */,
 				8404C6B21ED97DA80004DF42 /* LICENSE in Resources */,
+				844E8ABE1EE148E200C3C3D1 /* ThirdCollectionViewController.xib in Resources */,
 				8404C68F1ED97D200004DF42 /* SecondCollectionViewController.xib in Resources */,
 				8404C6851ED97AE90004DF42 /* HomeViewController.xib in Resources */,
 				8404C68A1ED97C560004DF42 /* FirstCollectionViewController.xib in Resources */,
@@ -426,19 +463,23 @@
 			files = (
 				8404C6C11ED980870004DF42 /* SecondCollectionViewCell.m in Sources */,
 				8404C6B41ED97DA80004DF42 /* MASConstraint.m in Sources */,
+				844E8AC21EE1495F00C3C3D1 /* ThirdCollectionViewCell.m in Sources */,
 				8404C6C91ED984A70004DF42 /* SecondModel.m in Sources */,
 				8404C6B71ED97DA80004DF42 /* MASViewAttribute.m in Sources */,
+				844E8ABD1EE148E200C3C3D1 /* ThirdCollectionViewController.m in Sources */,
 				8404C6BC1ED97DA80004DF42 /* ViewController+MASAdditions.m in Sources */,
 				8404C6B91ED97DA80004DF42 /* NSArray+MASAdditions.m in Sources */,
 				8404C6511ED97A640004DF42 /* AppDelegate.m in Sources */,
 				8404C6B81ED97DA80004DF42 /* MASViewConstraint.m in Sources */,
 				8404C6B61ED97DA80004DF42 /* MASLayoutConstraint.m in Sources */,
+				844E8AB81EE143D200C3C3D1 /* UILabel+GQLabel.m in Sources */,
 				8404C6891ED97C560004DF42 /* FirstCollectionViewController.m in Sources */,
 				8404C64E1ED97A640004DF42 /* main.m in Sources */,
 				8404C6BB1ED97DA80004DF42 /* View+MASAdditions.m in Sources */,
 				8404C6B31ED97DA80004DF42 /* MASCompositeConstraint.m in Sources */,
 				8404C6BD1ED97DA80004DF42 /* README.md in Sources */,
 				8404C6BA1ED97DA80004DF42 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				844E8AC61EE14A9B00C3C3D1 /* ThirdModel.m in Sources */,
 				8404C6B51ED97DA80004DF42 /* MASConstraintMaker.m in Sources */,
 				8404C68E1ED97D200004DF42 /* SecondCollectionViewController.m in Sources */,
 				8404C6841ED97AE90004DF42 /* HomeViewController.m in Sources */,
@@ -672,6 +713,7 @@
 				8404C6781ED97A650004DF42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8404C6791ED97A650004DF42 /* Build configuration list for PBXNativeTarget "NewSelfSizingCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -680,6 +722,7 @@
 				8404C67B1ED97A650004DF42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8404C67C1ED97A650004DF42 /* Build configuration list for PBXNativeTarget "NewSelfSizingCollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -688,6 +731,7 @@
 				8404C67E1ED97A650004DF42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
