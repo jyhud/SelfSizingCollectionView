@@ -10,6 +10,7 @@
 #import "FirstCollectionViewController.h"
 #import "SecondCollectionViewController.h"
 #import "ThirdCollectionViewController.h"
+#import "FourViewController.h"
 
 @interface HomeViewController ()
 
@@ -22,7 +23,7 @@
     [super viewDidLoad];
     
     
-    self.dataArr = @[@"UIcollectionView --- 标签",@"UIcollectionView --- 列表",@"UIcollectionView --- 动态更多"];
+    self.dataArr = @[@"UIcollectionView --- 标签",@"UIcollectionView --- 列表",@"UIcollectionView --- 动态更多",@"YYText"];
 }
 
 #pragma mark-UITableViewDataSource/UITableViewDelegate
@@ -66,6 +67,13 @@
         {
             ThirdCollectionViewController * thirdVC = [[ThirdCollectionViewController alloc]initWithNibName:@"ThirdCollectionViewController" bundle:nil];
             [self.navigationController pushViewController:thirdVC animated:YES];
+            
+        }
+            break;
+        case 3:
+        {
+            FourViewController * fourVC = [[FourViewController alloc]initWithNibName:@"FourViewController" bundle:nil];
+            [self.navigationController pushViewController:fourVC animated:YES];
             
         }
             break;

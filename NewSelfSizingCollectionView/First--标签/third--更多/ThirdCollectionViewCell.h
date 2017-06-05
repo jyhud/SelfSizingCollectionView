@@ -14,6 +14,7 @@
 @property(nonatomic,strong)UILabel * firstLabel;
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 -(void)configureData:(ThirdModel *)model;
 

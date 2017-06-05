@@ -9,6 +9,7 @@
 #import "ThirdCollectionViewCell.h"
 #import "Masonry.h"
 #import "UILabel+GQLabel.h"
+#import "YYText.h"
 
 @interface ThirdCollectionViewCell()
 
@@ -43,16 +44,19 @@
 //        self.firstLabel.text = @"特朗普曾称气候变化是骗局，并在选举期间威胁要退出《巴黎协定》。他就任以来要求评估修改奥巴马政府制定的旨在减少发电厂碳排放的《清洁电力计划》。特朗普政府提出的2018财年联邦政府预算也提议停止向一些联合国应对气候变化项目拨款，并大幅削减美国环保局的预算";
 //        self.firstLabel.text = [UILabel textOfOnePointNumber:self.firstLabel];
         
+        self.addressLabel.text = model.name;
+        self.addressLabel.text = [UILabel textOfOnePointNumber:self.addressLabel];
+        
         self.myLabel.text = model.address;
         self.myLabel.text = [UILabel textOfOnePointNumber:self.myLabel];
         
-//        [self.secondLabel gq_addAttributeTapActionWithStrings:@[@"更多"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
-//            
-//            NSLog(@"设置是否有点击效果，默认是YES");
-//            
-//        }];
-//        //设置是否有点击效果，默认是YES
-//        self.secondLabel.enabledTapEffect = YES;
+        [self.myLabel gq_addAttributeTapActionWithStrings:@[@"更多"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
+            
+            NSLog(@"设置是否有点击效果，默认是YES");
+            
+        }];
+        //设置是否有点击效果，默认是YES
+        self.myLabel.enabledTapEffect = YES;
         
     }
 
