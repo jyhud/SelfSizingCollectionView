@@ -8,6 +8,7 @@
 
 #import "FourViewController.h"
 #import "YYText.h"
+#import "NSString+YYAdd.h"
 #import "Masonry.h"
 
 @interface FourViewController ()
@@ -45,11 +46,71 @@
 //    label.lineBreakMode = NSLineBreakByWordWrapping;
     label.backgroundColor = [UIColor greenColor];
     [self.view addSubview:label];
+    /*
+     YYLabel *contentL = [[YYLabel alloc] init];
+     //设置多行
+     contentL.numberOfLines = 0;
+     //这个属性必须设置，多行才有效
+     contentL.preferredMaxLayoutWidth = kScreenWidth -32;
+     
+     NSMutableAttributedString *attri = [[NSMutableAttributedString alloc] initWithAttributedString:[OSCBaseCommetView contentStringFromRawString:commentItem.content withFont:24.0]];
+     
+     //可以将要插入的图片作为特殊字符处理
+     //需要使用 YYAnimatedImageView 控件，直接使用UIImage添加无效。
+     
+     YYAnimatedImageView *imageView1= [[YYAnimatedImageView alloc] initWithImage:[UIImage imageNamed:@"ic_quote_left"]];
+     imageView1.frame = CGRectMake(0, 0, 16, 16);
+     
+     YYAnimatedImageView *imageView2= [[YYAnimatedImageView alloc] initWithImage:[UIImage imageNamed:@"ic_quote_right"]];
+     imageView2.frame = CGRectMake(0, 0, 16, 16);
+     // attchmentSize 修改，可以处理内边距
+     NSMutableAttributedString *attachText1= [NSMutableAttributedString attachmentStringWithContent:imageView1 contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView1.frame.size alignToFont:[UIFont systemFontOfSize:24] alignment:YYTextVerticalAlignmentCenter];
+     
+     NSMutableAttributedString *attachText2= [NSMutableAttributedString attachmentStringWithContent:imageView2 contentMode:UIViewContentModeScaleAspectFit attachmentSize:imageView2.frame.size alignToFont:[UIFont systemFontOfSize:24] alignment:YYTextVerticalAlignmentCenter];
+     
+     //插入到开头
+     [attri insertAttributedString:attachText1 atIndex:0];
+     //插入到结尾
+     [attri appendAttributedString:attachText2];
+     
+     //用label的attributedText属性来使用富文本
+     contentL.attributedText = attri;
+     
+     CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 32, MAXFLOAT);
+     
+     //计算文本尺寸
+     YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:maxSize text:attri];
+     contentL.textLayout = layout;
+     CGFloat introHeight = layout.textBoundingSize.height;
+     
+     
+     contentL.frame =  commentItem.layoutInfo.contentTextViewFrame;
+     contentL.width = maxSize.width;
+     
+     contentL.height = introHeight + 50;
+     
+     [self addSubview:contentL];
+     */
+//    YYTextContainer  *titleContarer = [YYTextContainer new];
+//    
+//    //限制宽度
+//    titleContarer.size             = CGSizeMake(100,CGFLOAT_MAX);
+//    NSMutableAttributedString  *titleAttr = [self getAttr:title];
+//    YYTextLayout *titleLayout = [YYTextLayout layoutWithContainer:titleContarer text:titleAttr];
+//    
+//    CGFloat titleLabelHeight = titleLayout.textBoundingSize.height;
+    
+    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 32, MAXFLOAT);
+    
+    //计算文本尺寸
+    YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:maxSize text:text];
+    label.textLayout = layout;
+    CGFloat introHeight = layout.textBoundingSize.height;
     
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(200);
         make.leading.trailing.mas_equalTo(0);
-        make.height.mas_greaterThanOrEqualTo(200);
+        make.height.mas_equalTo(introHeight);
         
     }];
 }

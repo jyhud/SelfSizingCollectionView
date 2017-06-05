@@ -70,6 +70,7 @@
 		84BFAAA21EE557CB0073250D /* YYTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BFAA8A1EE557CB0073250D /* YYTextView.m */; };
 		84BFAAA71EE558CF0073250D /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BFAAA51EE558CF0073250D /* FourViewController.m */; };
 		84BFAAA81EE558CF0073250D /* FourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BFAAA61EE558CF0073250D /* FourViewController.xib */; };
+		84BFAAAB1EE568D30073250D /* NSString+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BFAAAA1EE568D30073250D /* NSString+YYAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		84BFAAA41EE558CF0073250D /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		84BFAAA51EE558CF0073250D /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
 		84BFAAA61EE558CF0073250D /* FourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourViewController.xib; sourceTree = "<group>"; };
+		84BFAAA91EE568D30073250D /* NSString+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAdd.h"; sourceTree = "<group>"; };
+		84BFAAAA1EE568D30073250D /* NSString+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +459,8 @@
 		84BFAA751EE557CB0073250D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				84BFAAA91EE568D30073250D /* NSString+YYAdd.h */,
+				84BFAAAA1EE568D30073250D /* NSString+YYAdd.m */,
 				84BFAA761EE557CB0073250D /* NSAttributedString+YYText.h */,
 				84BFAA771EE557CB0073250D /* NSAttributedString+YYText.m */,
 				84BFAA781EE557CB0073250D /* NSParagraphStyle+YYText.h */,
@@ -646,6 +651,7 @@
 				8404C6BC1ED97DA80004DF42 /* ViewController+MASAdditions.m in Sources */,
 				8404C6B91ED97DA80004DF42 /* NSArray+MASAdditions.m in Sources */,
 				84BFAA931EE557CB0073250D /* YYTextSelectionView.m in Sources */,
+				84BFAAAB1EE568D30073250D /* NSString+YYAdd.m in Sources */,
 				84BFAA951EE557CB0073250D /* YYTextAttribute.m in Sources */,
 				84BFAA961EE557CB0073250D /* YYTextParser.m in Sources */,
 				8404C6511ED97A640004DF42 /* AppDelegate.m in Sources */,
