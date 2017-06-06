@@ -13,16 +13,14 @@
 
 @interface ThirdCollectionViewCell()
 
+@property(nonatomic,strong)YYLabel * yy_label;
+
 @end
 
 @implementation ThirdCollectionViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-
-//    self.firstLabel = [[UILabel alloc]initWithFrame: CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
-//    [self.contentView addSubview:self.firstLabel];
-//
     
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -30,37 +28,117 @@
         make.top.mas_equalTo(0);
         make.width.mas_equalTo([UIScreen mainScreen].bounds.size.width);
     }];
+    
+    self.yy_label = [YYLabel new];
+    self.yy_label.textAlignment = NSTextAlignmentLeft;
+    self.yy_label.textVerticalAlignment = YYTextVerticalAlignmentTop;
+    self.yy_label.numberOfLines = 0;
+    self.yy_label.font = [UIFont systemFontOfSize:20];
+    //    label.lineBreakMode = NSLineBreakByWordWrapping;
+    self.yy_label.backgroundColor = [UIColor grayColor];
+    [self.contentView addSubview:self.yy_label];
+    
+    [self.yy_label mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.leading.trailing.mas_equalTo(0);
+        make.top.mas_equalTo(0);
+        make.bottom.mas_equalTo(0);
+    }];
+
 }
-
-
 
 -(void)configureData:(ThirdModel *)model{
 
-
     if (model) {
+        
+        self.yy_label.text = model.address;
+        NSString * string = [self textWithString:model.address andFont:[UIFont systemFontOfSize:20] andWith:[UIScreen mainScreen].bounds.size.width];
+        
+        NSLog(@"string is\n\n %@",string);
+        
+        
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT);
+        NSMutableAttributedString * muteStr = [[NSMutableAttributedString alloc] initWithString:string];
+        muteStr.yy_font = [UIFont systemFontOfSize:20];
+        
+        NSRange  range =  [string rangeOfString:@"...更多"];
+        [muteStr yy_setTextHighlightRange:range
+                                color:[UIColor redColor]
+                      backgroundColor:[UIColor clearColor]
+                            tapAction:^(UIView *containerView, NSAttributedString *text, NSRange range, CGRect rect){
+                                NSLog(@"wahhahahaha");
+                                if (self.delegate&& [self.delegate respondsToSelector:@selector(clickMore)]) {
+                                    
+                                    [self.delegate clickMore];
+                                    
+                                }
+                                
+                                
+                            }];
+        
+        self.yy_label.attributedText = muteStr;
+        //计算文本尺寸
+        YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:maxSize text:  muteStr];
+        self.yy_label.textLayout = layout;
+        CGFloat introHeight = layout.textBoundingSize.height;
 
-//        self.firstLabel.numberOfLines = 0;
-//        self.firstLabel.font = [UIFont systemFontOfSize:14];
-//        self.firstLabel.text = @"特朗普曾称气候变化是骗局，并在选举期间威胁要退出《巴黎协定》。他就任以来要求评估修改奥巴马政府制定的旨在减少发电厂碳排放的《清洁电力计划》。特朗普政府提出的2018财年联邦政府预算也提议停止向一些联合国应对气候变化项目拨款，并大幅削减美国环保局的预算";
-//        self.firstLabel.text = [UILabel textOfOnePointNumber:self.firstLabel];
-        
-        self.addressLabel.text = model.name;
-        self.addressLabel.text = [UILabel textOfOnePointNumber:self.addressLabel];
-        
-        self.myLabel.text = model.address;
-        self.myLabel.text = [UILabel textOfOnePointNumber:self.myLabel];
-        
-        [self.myLabel gq_addAttributeTapActionWithStrings:@[@"更多"] tapClicked:^(NSString *string, NSRange range, NSInteger index) {
-            
-            NSLog(@"设置是否有点击效果，默认是YES");
-            
+        [self.yy_label mas_updateConstraints:^(MASConstraintMaker *make) {
+    
+            make.height.mas_equalTo(introHeight);
         }];
-        //设置是否有点击效果，默认是YES
-        self.myLabel.enabledTapEffect = YES;
-        
+        [self layoutIfNeeded];
     }
 
-
 }
+
+
+-(NSString *)textWithString:(NSString *)contentStr andFont:(UIFont *)contentfont andWith:(CGFloat)contentWidth{
+    
+    NSString *text = contentStr;
+    UIFont   *font = contentfont;
+    
+    CTFontRef myFont = CTFontCreateWithName((__bridge CFStringRef)([font fontName]), ([font pointSize]), NULL);
+    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:text];
+    
+    [attStr addAttribute:(NSString *)kCTFontAttributeName value:(__bridge id)myFont range:NSMakeRange(0, attStr.length)];
+    
+    CTFramesetterRef frameSetter = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attStr);
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, CGRectMake(0,0,contentWidth-10,100000));
+    
+    CTFrameRef frame = CTFramesetterCreateFrame(frameSetter, CFRangeMake(0, 0), path, NULL);
+    
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(frame);
+    NSMutableArray *linesArray = [[NSMutableArray alloc]init];
+    
+    for (id line in lines){
+        CTLineRef lineRef = (__bridge CTLineRef )line;
+        CFRange lineRange = CTLineGetStringRange(lineRef);
+        NSRange range = NSMakeRange(lineRange.location, lineRange.length);
+        
+        NSString *lineString = [text substringWithRange:range];
+        [linesArray addObject:lineString];
+    }
+    //处理数组中的数据
+    NSMutableString *stringLast = [NSMutableString new];
+    //先判断返回的数组长度是否大于2；
+    
+    if(linesArray.count>3){
+        
+        NSLog(@"-----%lu-----%lu",(unsigned long)[linesArray[2] length],(unsigned long)[linesArray[0] length]);
+        
+        stringLast = [NSMutableString stringWithFormat:@"%@%@%@",
+                      linesArray[0],linesArray[1],
+                      [linesArray[2] substringToIndex:[linesArray[0] length]-3]];
+        [stringLast appendString:@"...更多"];
+        
+        
+    }else{//长度为1
+        return contentStr;
+    }
+    return stringLast;
+}
+
 
 @end

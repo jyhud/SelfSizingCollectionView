@@ -9,12 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "ThirdModel.h"
 
+@protocol ThirdCollectionViewCellDelegate <NSObject>
+
+-(void)clickMore;
+
+@end
+
 @interface ThirdCollectionViewCell : UICollectionViewCell
 
 @property(nonatomic,strong)UILabel * firstLabel;
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property(nonatomic,assign)id<ThirdCollectionViewCellDelegate>delegate;
 
 -(void)configureData:(ThirdModel *)model;
 

@@ -17,36 +17,8 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                <subviews>
-                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17I-BF-5Wz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
-                        <color key="backgroundColor" red="0.87450980389999999" green="0.1843137255" blue="0.050980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V69-4D-cOA" userLabel="addressLabel">
-                        <rect key="frame" x="0.0" y="21" width="320" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </subviews>
             </view>
             <color key="backgroundColor" red="0.18292410710000001" green="0.56289062499999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="V69-4D-cOA" secondAttribute="bottom" id="7Oa-S7-fPW"/>
-                <constraint firstItem="17I-BF-5Wz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Chs-kN-H7c"/>
-                <constraint firstAttribute="trailing" secondItem="V69-4D-cOA" secondAttribute="trailing" id="P8l-gO-D3o"/>
-                <constraint firstItem="V69-4D-cOA" firstAttribute="top" secondItem="17I-BF-5Wz" secondAttribute="bottom" id="obl-BH-EvV"/>
-                <constraint firstItem="17I-BF-5Wz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rMn-Mg-vR4"/>
-                <constraint firstAttribute="trailing" secondItem="17I-BF-5Wz" secondAttribute="trailing" id="uY8-mz-wMu"/>
-                <constraint firstItem="V69-4D-cOA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zWb-2x-Vdd"/>
-            </constraints>
-            <connections>
-                <outlet property="addressLabel" destination="V69-4D-cOA" id="lwE-TH-FjV"/>
-                <outlet property="myLabel" destination="17I-BF-5Wz" id="N9l-g4-rQP"/>
-            </connections>
         </collectionViewCell>
     </objects>
 </document>

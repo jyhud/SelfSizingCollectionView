@@ -10,7 +10,7 @@
 #import "ThirdCollectionViewCell.h"
 #import "ThirdModel.h"
 
-@interface ThirdCollectionViewController ()
+@interface ThirdCollectionViewController ()<ThirdCollectionViewCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *thirdFlow;
 @property(nonatomic,strong)NSMutableArray * dataArr;
@@ -57,9 +57,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -70,10 +68,23 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ThirdCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ThirdCollectionViewCell" forIndexPath:indexPath];
+    cell.delegate = self;
     ThirdModel * model = self.dataArr[indexPath.item];
     [cell configureData:model];
     
     return cell;
+}
+
+#pragma mark- ThirdCollectionViewCellDelegate
+
+-(void)clickMore{
+
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"更多" message:@"哇哈哈哈" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * action = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

@@ -91,14 +91,6 @@
      
      [self addSubview:contentL];
      */
-//    YYTextContainer  *titleContarer = [YYTextContainer new];
-//    
-//    //限制宽度
-//    titleContarer.size             = CGSizeMake(100,CGFLOAT_MAX);
-//    NSMutableAttributedString  *titleAttr = [self getAttr:title];
-//    YYTextLayout *titleLayout = [YYTextLayout layoutWithContainer:titleContarer text:titleAttr];
-//    
-//    CGFloat titleLabelHeight = titleLayout.textBoundingSize.height;
     
     CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 32, MAXFLOAT);
     
