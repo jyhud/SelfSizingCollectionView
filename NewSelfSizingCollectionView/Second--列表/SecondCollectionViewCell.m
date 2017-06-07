@@ -29,7 +29,6 @@
     [super awakeFromNib];
     
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-    
         make.leading.mas_equalTo(0);
         make.top.mas_equalTo(0);
         make.width.mas_greaterThanOrEqualTo(10);

@@ -1,3 +1,12 @@
 问题：ertically scrolling UICollectionView with self-sizing cells only displays half the cells
 
 回答：https://stackoverflow.com/questions/25573855/vertically-scrolling-uicollectionview-with-self-sizing-cells-only-displays-half
+
+
+In iOS10 there is new constant called UICollectionViewFlowLayoutAutomaticSize, so instead:
+
+self.flowLayout.estimatedItemSize = CGSize(width: 100, height: 100)
+you can use this:
+
+self.flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize
+It has better performance especially when cells in you collection view has constant wid
