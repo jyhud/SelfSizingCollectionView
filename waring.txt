@@ -1,0 +1,3 @@
+问题：ertically scrolling UICollectionView with self-sizing cells only displays half the cells
+
+回答：https://stackoverflow.com/questions/25573855/vertically-scrolling-uicollectionview-with-self-sizing-cells-only-displays-half

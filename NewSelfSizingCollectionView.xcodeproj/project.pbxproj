@@ -38,6 +38,7 @@
 		8404C6C41ED983510004DF42 /* 1234.png in Resources */ = {isa = PBXBuildFile; fileRef = 8404C6C31ED983510004DF42 /* 1234.png */; };
 		8404C6C61ED983650004DF42 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8404C6C51ED983650004DF42 /* data.json */; };
 		8404C6C91ED984A70004DF42 /* SecondModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8404C6C81ED984A70004DF42 /* SecondModel.m */; };
+		84243C321EE8098500B0F2E8 /* waring.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84243C311EE8098500B0F2E8 /* waring.txt */; };
 		844E8AB81EE143D200C3C3D1 /* UILabel+GQLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8AB71EE143D200C3C3D1 /* UILabel+GQLabel.m */; };
 		844E8ABD1EE148E200C3C3D1 /* ThirdCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E8ABB1EE148E200C3C3D1 /* ThirdCollectionViewController.m */; };
 		844E8ABE1EE148E200C3C3D1 /* ThirdCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844E8ABC1EE148E200C3C3D1 /* ThirdCollectionViewController.xib */; };
@@ -71,6 +72,8 @@
 		84BFAAA71EE558CF0073250D /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BFAAA51EE558CF0073250D /* FourViewController.m */; };
 		84BFAAA81EE558CF0073250D /* FourViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84BFAAA61EE558CF0073250D /* FourViewController.xib */; };
 		84BFAAAB1EE568D30073250D /* NSString+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BFAAAA1EE568D30073250D /* NSString+YYAdd.m */; };
+		84FDD1901EE6F72A007B9A8B /* FiveCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84FDD18E1EE6F72A007B9A8B /* FiveCollectionViewController.m */; };
+		84FDD1911EE6F72A007B9A8B /* FiveCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84FDD18F1EE6F72A007B9A8B /* FiveCollectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +153,7 @@
 		8404C6C51ED983650004DF42 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		8404C6C71ED984A70004DF42 /* SecondModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondModel.h; sourceTree = "<group>"; };
 		8404C6C81ED984A70004DF42 /* SecondModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondModel.m; sourceTree = "<group>"; };
+		84243C311EE8098500B0F2E8 /* waring.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = waring.txt; sourceTree = "<group>"; };
 		844E8AB61EE143D200C3C3D1 /* UILabel+GQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+GQLabel.h"; sourceTree = "<group>"; };
 		844E8AB71EE143D200C3C3D1 /* UILabel+GQLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+GQLabel.m"; sourceTree = "<group>"; };
 		844E8ABA1EE148E200C3C3D1 /* ThirdCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdCollectionViewController.h; sourceTree = "<group>"; };
@@ -214,6 +218,9 @@
 		84BFAAA61EE558CF0073250D /* FourViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourViewController.xib; sourceTree = "<group>"; };
 		84BFAAA91EE568D30073250D /* NSString+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAdd.h"; sourceTree = "<group>"; };
 		84BFAAAA1EE568D30073250D /* NSString+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYAdd.m"; sourceTree = "<group>"; };
+		84FDD18D1EE6F72A007B9A8B /* FiveCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FiveCollectionViewController.h; sourceTree = "<group>"; };
+		84FDD18E1EE6F72A007B9A8B /* FiveCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FiveCollectionViewController.m; sourceTree = "<group>"; };
+		84FDD18F1EE6F72A007B9A8B /* FiveCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FiveCollectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +251,7 @@
 		8404C6401ED97A640004DF42 = {
 			isa = PBXGroup;
 			children = (
+				84243C311EE8098500B0F2E8 /* waring.txt */,
 				8404C64B1ED97A640004DF42 /* NewSelfSizingCollectionView */,
 				8404C6651ED97A640004DF42 /* NewSelfSizingCollectionViewTests */,
 				8404C6701ED97A650004DF42 /* NewSelfSizingCollectionViewUITests */,
@@ -275,6 +283,7 @@
 				8404C6811ED97AE90004DF42 /* HomeViewController.h */,
 				8404C6821ED97AE90004DF42 /* HomeViewController.m */,
 				8404C6831ED97AE90004DF42 /* HomeViewController.xib */,
+				84FDD18C1EE6F70C007B9A8B /* Five--瀑布流 */,
 				8404C67F1ED97A9A0004DF42 /* First--标签 */,
 				8404C6801ED97A9A0004DF42 /* Second--列表 */,
 				844E8AB91EE148B300C3C3D1 /* Third--更多 */,
@@ -492,6 +501,16 @@
 			path = "First--标签/third--更多/Four-YYText";
 			sourceTree = "<group>";
 		};
+		84FDD18C1EE6F70C007B9A8B /* Five--瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				84FDD18D1EE6F72A007B9A8B /* FiveCollectionViewController.h */,
+				84FDD18E1EE6F72A007B9A8B /* FiveCollectionViewController.m */,
+				84FDD18F1EE6F72A007B9A8B /* FiveCollectionViewController.xib */,
+			);
+			path = "Five--瀑布流";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -611,8 +630,10 @@
 				844E8AC31EE1495F00C3C3D1 /* ThirdCollectionViewCell.xib in Resources */,
 				8404C6B21ED97DA80004DF42 /* LICENSE in Resources */,
 				844E8ABE1EE148E200C3C3D1 /* ThirdCollectionViewController.xib in Resources */,
+				84FDD1911EE6F72A007B9A8B /* FiveCollectionViewController.xib in Resources */,
 				8404C68F1ED97D200004DF42 /* SecondCollectionViewController.xib in Resources */,
 				8404C6851ED97AE90004DF42 /* HomeViewController.xib in Resources */,
+				84243C321EE8098500B0F2E8 /* waring.txt in Resources */,
 				8404C68A1ED97C560004DF42 /* FirstCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,6 +701,7 @@
 				84BFAA941EE557CB0073250D /* YYTextArchiver.m in Sources */,
 				84BFAA9A1EE557CB0073250D /* NSParagraphStyle+YYText.m in Sources */,
 				84BFAA981EE557CB0073250D /* YYTextRunDelegate.m in Sources */,
+				84FDD1901EE6F72A007B9A8B /* FiveCollectionViewController.m in Sources */,
 				84BFAA9E1EE557CB0073250D /* YYTextTransaction.m in Sources */,
 				84BFAAA71EE558CF0073250D /* FourViewController.m in Sources */,
 				84BFAA9C1EE557CB0073250D /* UIView+YYText.m in Sources */,
