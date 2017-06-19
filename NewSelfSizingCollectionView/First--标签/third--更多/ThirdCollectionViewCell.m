@@ -55,11 +55,12 @@
         NSString * string = [self textWithString:model.address andFont:[UIFont systemFontOfSize:20] andWith:[UIScreen mainScreen].bounds.size.width];
         
         NSLog(@"string is\n\n %@",string);
-        
+        string = [NSString stringWithFormat:@"%@%@",@"👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿👿",@"贝泰尔表示，卢中建交45年来，两国经贸、金融、交通、文化等领域交流合作取得丰硕成果。我此次访华，旨在推进两国合作关系深入发展"];
         
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT);
         NSMutableAttributedString * muteStr = [[NSMutableAttributedString alloc] initWithString:string];
-        muteStr.yy_font = [UIFont systemFontOfSize:20];
+        muteStr.yy_font = [UIFont systemFontOfSize:12];
+        muteStr.yy_lineSpacing = 3;
         
         NSRange  range =  [string rangeOfString:@"...更多"];
         [muteStr yy_setTextHighlightRange:range
@@ -80,7 +81,17 @@
         //计算文本尺寸
         YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:maxSize text:  muteStr];
         self.yy_label.textLayout = layout;
-        CGFloat introHeight = layout.textBoundingSize.height;
+        
+        CGFloat introHeight = 0;
+        
+        if ([self stringContainsEmoji:string]) {
+        
+            introHeight = layout.textBoundingSize.height + 8;
+            
+        }else{
+        
+            introHeight = layout.textBoundingSize.height;
+        }
 
         [self.yy_label mas_updateConstraints:^(MASConstraintMaker *make) {
     
@@ -140,5 +151,45 @@
     return stringLast;
 }
 
+
+//判断是否含有Emoji表情
+- (BOOL)stringContainsEmoji:(NSString *)string
+{
+    __block BOOL returnValue =NO;
+    [string enumerateSubstringsInRange:NSMakeRange(0, [string length]) options:NSStringEnumerationByComposedCharacterSequences usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+        const unichar hs = [substring characterAtIndex:0];
+        // surrogate pair
+        if (0xd800) {
+            if (0xd800 <= hs && hs <= 0xdbff) {
+                if (substring.length > 1) {
+                    const unichar ls = [substring characterAtIndex:1];
+                    const int uc = ((hs - 0xd800) * 0x400) + (ls - 0xdc00) + 0x10000;
+                    if (0x1d000 <= uc && uc <= 0x1f77f) {
+                        returnValue =YES;
+                    }
+                }
+            }else if (substring.length > 1) {
+                const unichar ls = [substring characterAtIndex:1];
+                if (ls == 0x20e3) {
+                    returnValue =YES;
+                }
+            }else {
+                // non surrogate
+                if (0x2100 <= hs && hs <= 0x27ff) {
+                    returnValue =YES;
+                }else if (0x2B05 <= hs && hs <= 0x2b07) {
+                    returnValue =YES;
+                }else if (0x2934 <= hs && hs <= 0x2935) {
+                    returnValue =YES;
+                }else if (0x3297 <= hs && hs <= 0x3299) {
+                    returnValue =YES;
+                }else if (hs == 0xa9 || hs == 0xae || hs == 0x303d || hs == 0x3030 || hs == 0x2b55 || hs == 0x2b1c || hs == 0x2b1b || hs == 0x2b50) {
+                    returnValue =YES;
+                }
+            }
+        }
+    }];
+    return returnValue;
+}
 
 @end
