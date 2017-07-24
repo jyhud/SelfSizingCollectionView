@@ -25,7 +25,8 @@
 
     NSMutableAttributedString *one = [[NSMutableAttributedString alloc] initWithString:str];
     NSRange  range =  [str rangeOfString:@"...更多"];
-        one.yy_font = [UIFont boldSystemFontOfSize:14];
+        one.yy_font = [UIFont systemFontOfSize:15];
+
         one.yy_underlineStyle = NSUnderlineStyleNone;
         /// 2. or you can use the convenience method
         [one yy_setTextHighlightRange:range
@@ -36,7 +37,8 @@
                             }];
         
         [text appendAttributedString:one];
-        [text appendAttributedString:[[NSAttributedString alloc] initWithString:@"中新网6月5日电 据山东省临沂临港经济开发区宣传办公室官方微博消息，临沂市临港区金誉石化“6.5”爆炸事故救援指挥部最新消息：截至6月5日16时，经过现场搜救，7名失联人员已全部找到，均不幸遇难。截至目前，事故已造成8人遇难，9人受伤"]];
+        text.yy_lineSpacing = 5;
+
 
     YYLabel *label = [YYLabel new];
     label.attributedText = text;

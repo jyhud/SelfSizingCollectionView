@@ -60,7 +60,7 @@
         CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, MAXFLOAT);
         NSMutableAttributedString * muteStr = [[NSMutableAttributedString alloc] initWithString:string];
         muteStr.yy_font = [UIFont systemFontOfSize:12];
-        muteStr.yy_lineSpacing = 3;
+        muteStr.yy_lineSpacing = 7;
         
         NSRange  range =  [string rangeOfString:@"...更多"];
         [muteStr yy_setTextHighlightRange:range
